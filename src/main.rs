@@ -1,9 +1,12 @@
+mod vec3;
+pub use vec3::{Vec3, cross, dot, unit_vector};
+
 fn main() {
 
     //Image
 
-    let image_width = 256;
-    let image_height = 256;
+    let image_width = 5;
+    let image_height = 5;
 
     println!("P3\n{} {}\n255\n", image_width, image_height);
 
@@ -24,7 +27,7 @@ fn main() {
             ig = (255.999 * g) as i32;
             ib = (255.999 * b) as i32;
 
-            println!("{} {} {}", ir, ig, ib);
+            println!("{} {} {}\n", ir, ig, ib);
         }
     }
 
